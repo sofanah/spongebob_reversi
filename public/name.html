@@ -5,11 +5,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <title>Enter your user name for Reversi</title>
+    <title>Reversi Username</title>
 
     <style>
       #header-row{
-        background-image: url(assets/images/beige-pink.png);
+        background-color: #F4976C;
+      }
+
+      .btn-warning, .btn-warning:hover, .btn-warning:active, .btn-warning:visited {
+        background-color: #FBE8A6 !important;
+      }
+
+      .center_div{
+        margin: 0 auto;
+        width:20% 
       }
     </style>
     <script>
@@ -23,7 +32,29 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-    
+    <nav class='navbar navbar-expand-lg navbar-dark' style='background-color:#303C6C;'>
+      <a class='navbar-brand' href='index.html'>
+        <img src='assets/images/logo.png' width='30' height='30' class='d-inline-block align-top' alt=''>
+      </a>
+      <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
+       <span class='navbar-toggler-icon'></span>
+      </button>
+
+      <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+        <ul class='navbar-nav mr-auto'>
+          <li class='nav-item'>
+            <a class='nav-link' href='about.html'>About<span class='sr-only'>(current)</span></a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' href='https://en.wikipedia.org/wiki/Reversi'>Rules</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link active' href='name.html'>Lobby</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
     <div class="container-fluid text-center">
       
       <div class="row" id="header-row">
@@ -33,17 +64,18 @@
       </div>
       <div class='row'>
         <div class='col'>
-          <form onsubmit='submitForm(); return false;' class='form-inline'>
+          <br>
+          <form onsubmit='submitForm(); return false;' class='form center_div'>
             <div class='form-group'>
               <label for='username' class='col-form-label sr-only'>Enter your user name</label>
-              <input class='form-control' type='text' value='' id='username' placeholder='Enter your user name' autocomplete='off'>
+              <input class='form-control text-center' type='text' value='' id='username' placeholder='Enter your user name' autocomplete='off'>
             </div>
-            <button type='sumbit' class='btn btn-default btn-primary'>Done</button>
+            <button type='sumbit' class='btn btn-warning btn-primary'>Done</button>
           </form>
         </div>
       </div>
-
     </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -57,10 +57,10 @@ socket.on('join_room_response', function(payload){
 
 		nodeA.addClass('w-100');
 
-		nodeB.addClass('col-8 text-right');
+		nodeB.addClass('col-8 text-left');
 		nodeB.append('<h4>'+payload.username+'</h4>');
 		
-		nodeC.addClass('col-3 text-left');
+		nodeC.addClass('col-3 text-right');
 		var buttonC = makeInviteButton(payload.socket_id);
 		nodeC.append(buttonC);
 
@@ -213,7 +213,7 @@ socket.on('send_message_response', function(payload){
 });
 
 function makeInviteButton(socket_id) {
-	var newHTML = '<button type=\'button\' class=\'btn btn-outline-primary\'>Invite</button>';
+	var newHTML = '<button type=\'button\' class=\'btn btn-outline-primary \'>Invite</button>';
 	var newNode = $(newHTML);
 	newNode.click(function(){
 		invite(socket_id);
